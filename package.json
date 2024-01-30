@@ -1,0 +1,48 @@
+{
+  "name": "ires",
+  "version": "1.0.0",
+  "description": "terminal dashboard for system monitoring",
+  "main": "./index.js",
+  "bin": {
+    "gtop": "./bin/ires"
+  },
+  "scripts": {
+    "test": "echo \"Test will be implemented.\" && exit 0",
+    "start": "./bin/ires",
+    "lint": "prettier --single-quote --trailing-comma es5 --write 'lib/**/*.js'",
+    "lint-check": "prettier --check --single-quote --trailing-comma es5 'lib/**/*.js'",
+    "prepublishOnly": "marked-man --version $npm_package_version --manual 'Gtop Help' --section 1 ./CLI.md > gtop.1"
+  },
+  "man": ["./ires.1"],
+  "repository": {
+    "type": "git",
+    "url": "git+"
+  },
+  "keywords": [
+    "system",
+    "monitoring",
+    "top",
+    "chart",
+    "monitor",
+    "dashboard",
+    "os"
+  ],
+  "author": "bhowell-cmd",
+  "license": "MIT",
+  "bugs": {
+    "url": 
+  },
+  "homepage": "https://github.com/aksakalli/gtop#readme",
+  "dependencies": {
+    "blessed": "^0.1.81",
+    "blessed-contrib": "^4.11.0",
+    "systeminformation": "^5.18.15"
+  },
+  "engines": {
+    "node": ">=4.0.0"
+  },
+  "devDependencies": {
+    "marked-man": "^1.3.3",
+    "prettier": "1.19.1"
+  }
+}
