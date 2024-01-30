@@ -1,0 +1,20 @@
+name: ires
+summary: System monitoring dashboard for terminal
+description: |
+  System monitoring dashboard for terminal
+version: git
+base: core22
+grade: stable
+
+confinement: classic
+
+apps:
+  gtop:
+    command: bin/ires
+
+parts:
+  gtop:
+    source: .
+    plugin: npm
+    npm-include-node: true
+    npm-node-version: "17.3.0"
